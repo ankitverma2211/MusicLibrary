@@ -1,5 +1,6 @@
 package musiclibrary
 
+
 class Song {
     String title
     int duration

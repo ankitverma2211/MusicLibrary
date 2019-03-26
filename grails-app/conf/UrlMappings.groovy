@@ -1,9 +1,15 @@
+
+
 class UrlMappings {
 
 	static mappings = {
-        "/$controller/$action?/$id?(.$format)?"{
-            constraints {
-                // apply constraints here
+        "/$controller"(parseRequest: true){
+           action=[GET: "list", POST:"save"]
+        }
+        "/$controller/$id"(parseRequest: true){
+            action=[GET: "show",PUT:"update", POST:"update"]
+            constraints{
+                id matches:/\d+/
             }
         }
 
