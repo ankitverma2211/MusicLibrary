@@ -6,6 +6,12 @@ class User {
     String dob
     String address
 
+    static hasMany = [playlists: Playlist]
+
+    static mapping = {
+        table 'users'
+    }
+
     static constraints = {
         name blank:false , size:5..50
         gender blank:false

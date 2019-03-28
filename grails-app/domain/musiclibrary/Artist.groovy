@@ -5,6 +5,8 @@ class Artist {
     String gender
     String dob
 
+    static hasMany = [songs: Song]
+
     static constraints = {
         name blank:false
         gender blank:false
