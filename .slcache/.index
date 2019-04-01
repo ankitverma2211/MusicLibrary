@@ -4492,3 +4492,11 @@ n:2839:script15536808413321193914364$_run_closure3_closure6
 n:3143:script15536808413321193914364$_run_closure3_closure6_closure9
 n:4071:script15536808413321193914364$_run_closure3_closure6_closure9_closure10
 n:897:org/codehaus/groovy/grails/exceptions/GrailsDomainException
+n:3123:org/codehaus/groovy/ast/AstToTextHelper
+n:1393:java_lang_Object$getClass$1
+n:1575:org/codehaus/groovy/control/CompilerConfiguration$setTargetDirectory
+n:1905:groovy/lang/Closure$curry
+n:1106:org/grails/datastore/mapping/reflect/ClassPropertyFetcher$1
+y:1967:org/grails/datastore/mapping/reflect/ClassPropertyFetcher$GetterPropertyFetcher
+y:5602:org/grails/datastore/mapping/reflect/ReflectionUtils
+n:1068:org/apache/tools/ant/IntrospectionHelper$1

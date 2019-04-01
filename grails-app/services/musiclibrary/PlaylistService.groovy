@@ -13,8 +13,6 @@ class PlaylistService {
 
         playlist.save()
 
-        return playlist
-
     }
 
     Playlist updatePlaylist(Integer id, Playlist pl){
@@ -24,7 +22,7 @@ class PlaylistService {
         playlist.name = pl.name
         playlist.description = pl.description
 
-        return playlist
+        playlist.save()
     }
 
     Playlist listAll(){
@@ -32,14 +30,28 @@ class PlaylistService {
         return all
     }
 
+    Playlist getPlaylist(Integer id){
+        def playlist = Playlist.where {it.id == id}
+        return playlist
+    }
+
     Playlist addSongToPlaylist(Integer playlistId,Integer songId){
-         def playlist = Playlist.findById(id)
+         def playlist = Playlist.findById(playlistId)
          playlist.addToSongs(songId).save()
-         return playlist
+         return Playlist.list()
+    }
+
+    boolean deletePlaylist(Integer playlistId){
+        def playlist = Playlist.get(playlistId);
+
+        playlist.delete()
+
     }
 
     Playlist removeSongFromPlaylist (Integer playlistId, Integer songId){
-
+            def playlist = Playlist.findById(playlistId)
+            def song = playlist.songs.find{it.id = songId}
+            playlist.removeFromSongs(song)
     }
 
 }
